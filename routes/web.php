@@ -58,3 +58,11 @@ Route::redirect('/beranda', '/');
 Route::fallback(function () {
 return response('Halaman tidak ditemukan (kustom).', 404);
 });
+
+
+
+use App\Http\Controllers\ProdukController;
+
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk.index');
+Route::get('/produk/{id}', [ProdukController::class, 'show'])->name('produk.show');
+Route::resource('produk', ProdukController::class);

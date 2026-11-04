@@ -1,4 +1,3 @@
-//3.1 Route sederhana (Closure)
 <?php
 use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
@@ -75,3 +74,7 @@ Route::get('/profil', [MahasiswaController::class, 'profil'])->name('mahasiswa.p
 Route::get('/mahasiswa', [MahasiswaController::class, 'daftar'])->name('mahasiswa.daftar');
 
 Route::get('/mahasiswa/{nim}', [MahasiswaController::class, 'show'])->name('mahasiswa.show');
+
+use App\Http\Controllers\JurusanController;
+Route::get('/jurusan', [JurusanController::class, 'index']);
+Route::get('/jurusan/{id}', [JurusanController::class, 'show']);

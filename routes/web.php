@@ -88,3 +88,10 @@ Route::get('/matakuliah', [MatakuliahController::class, 'index'])->name('matakul
 Route::get('/matakuliah/create', [MatakuliahController::class, 'create'])->name('matakuliah.create');
 Route::post('/matakuliah', [MatakuliahController::class, 'store'])->name('matakuliah.store');
 Route::get('/matakuliah/{id}', [MatakuliahController::class, 'show'])->name('matakuliah.show');
+
+//uts
+use App\Http\Controllers\BukuController;
+
+Route::get('/buku', [BukuController::class, 'index'])->name('buku.index');
+Route::get('/buku/create', [BukuController::class, 'create'])->name('buku.create');
+Route::post('/buku', [BukuController::class, 'store'])->name('buku.store');
